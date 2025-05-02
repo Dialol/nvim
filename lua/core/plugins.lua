@@ -16,6 +16,15 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     { 'phaazon/hop.nvim' },
     { 'nvim-treesitter/nvim-treesitter' },
+    { 'nvim-tree/nvim-web-devicons'}, --add
+    {
+      "nvimdev/lspsaga.nvim",
+      event = "LspAttach",
+      dependencies = {
+        "nvim-treesitter/nvim-treesitter",
+        "nvim-tree/nvim-web-devicons"
+      }
+    }, --add
     { 'neovim/nvim-lspconfig' },
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },

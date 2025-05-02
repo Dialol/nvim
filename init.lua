@@ -24,6 +24,7 @@ require('plugins.luasnip')
 require('plugins.outline')
 require('plugins.whichkey')
 require('plugins.toggleterm')
+require('lspsaga') --add
 
 vim.env.PATH = vim.env.PATH .. ':/home/dialol/.nvm/versions/node/v23.9.0/bin'
 vim.opt.swapfile = true
