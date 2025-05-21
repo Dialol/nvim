@@ -6,7 +6,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable", 
     lazypath,
   })
 end
@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     { 'phaazon/hop.nvim' },
     { 'nvim-treesitter/nvim-treesitter' },
-    { 'nvim-tree/nvim-web-devicons'}, --add
+    { 'nvim-tree/nvim-web-devicons'}, 
     {
       "nvimdev/lspsaga.nvim",
       event = "LspAttach",
@@ -24,7 +24,7 @@ require("lazy").setup({
         "nvim-treesitter/nvim-treesitter",
         "nvim-tree/nvim-web-devicons"
       }
-    }, --add
+    }, 
     { 'neovim/nvim-lspconfig' },
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
@@ -32,7 +32,6 @@ require("lazy").setup({
     { 'hrsh7th/cmp-nvim-lsp' },        
     { 'L3MON4D3/LuaSnip', dependencies = { 'rafamadriz/friendly-snippets' }, },
     { 'saadparwaiz1/cmp_luasnip' },
-    { 'rebelot/kanagawa.nvim', priority = 1000 },
     { 'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'dense-analysis/ale' },
     { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
@@ -47,6 +46,7 @@ require("lazy").setup({
     { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { 'hedyhli/outline.nvim' },
     { 'folke/which-key.nvim', event = 'VeryLazy' },
-    { 'akinsho/toggleterm.nvim', version = "*", config = true }
+    { 'akinsho/toggleterm.nvim', version = "*", config = true },
+    { "Mofiqul/vscode.nvim" }
 })
 
